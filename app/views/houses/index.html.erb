@@ -1,0 +1,11 @@
+<div class="container">
+<h1>Hey! This is where the houses will appear</h1>
+</div>
+
+
+<% @houses.all.each do |u| %>
+
+<%=link_to u.name, house_path(u)%>
+<br>
+
+<%end%>
