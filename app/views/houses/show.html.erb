@@ -1,0 +1,5 @@
+<h1><%= "Welcome to #{@house.name}!"  %></h1>
+<h3>People living in this house:</h3>
+<% @house.users.each do |u| %>
+<%= link_to u.name, user_path(u) %>
+<%end%>

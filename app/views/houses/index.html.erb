@@ -1,11 +1,15 @@
-<div class="container">
-<h1>Hey! This is where the houses will appear</h1>
+
+<div class="content">
+  <div class="index">
+    <h1>
+      Houses
+    </h1>
+  </div>
+  <div class="container" style="width: 95%">
+    <div class="row">
+      <% @houses.each do |house| %>
+        <%= render "house_card", house: house%>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-
-<% @houses.all.each do |u| %>
-
-<%=link_to u.name, house_path(u)%>
-<br>
-
-<%end%>
