@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_24_074731) do
+ActiveRecord::Schema.define(version: 2019_03_18_004353) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,16 @@ ActiveRecord::Schema.define(version: 2019_01_24_074731) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "points", default: 0
+  end
+
+  create_table "points_transactions", force: :cascade do |t|
+    t.bigint "house_id"
+    t.integer "ammount"
+    t.boolean "in"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["house_id"], name: "index_points_transactions_on_house_id"
   end
 
   create_table "users", force: :cascade do |t|

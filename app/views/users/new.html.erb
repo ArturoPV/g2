@@ -2,23 +2,22 @@
 <%= form_for @user do |f| %>
   <h1 style="font-family: Arial,sans-serif;">Sign Up</h1>
   <div class="form-group">
-    <label for="nombre">Name:</label>
-    <input type="text" class="form-control" id="nombre" name="user[fname]">
-  </div>
-
-<div class="form-group">
-  <label for="email">Email address:</label>
-  <input type="email" class="form-control" id="email" name="user[email]">
-</div>
-
-  <div class="form-group">
-    <label for="edad">Age:</label>
-    <input type="number" id="replyNumber" class="form-control" min="0" step="1" data-bind="value:replyNumber" name="user[age]"/>
+    <%= f.label :Name %>:
+    <%= f.text_field :name %><br />
   </div>
 
   <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="password" name="user[password]">
+    <%= f.label :Age %>:
+    <%= f.number_field :age %><br />
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Email %>:
+    <%= f.text_field :email %><br />
+
+  <div class="form-group">
+    <%= f.label :Password %>:
+    <%= f.password_field(:password) %>
   </div>
   <%= f.submit %>
   <!--button id="registrar" class="btn btn-default" style="background: linear-gradient(to bottom,#dc3545,#f0c14b); width: 100%">Registrarse</button-->

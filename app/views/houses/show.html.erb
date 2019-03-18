@@ -3,3 +3,5 @@
 <% @house.users.each do |u| %>
 <%= link_to u.name, user_path(u) %>
 <%end%>
+<h4>Golden Nuggets!:</h4>
+<%= @house.points %>

@@ -1,0 +1,2 @@
+class PointsTransactions < ApplicationRecord
+end
