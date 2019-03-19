@@ -1,0 +1,14 @@
+<div class="container" style="width: 26%; margin-top: 5%;">
+<%= form_for @points_transaction do |f| %>
+  <h1 style="font-family: Arial,sans-serif;">add points</h1>
+  <div class="form-group">
+    <%= f.label :id %>:
+    <%= f.number_field :house_id %><br />
+  </div>
+
+  <div class="form-group">
+    <%= f.label :points %>:
+    <%= f.number_field :ammount %><br />
+  </div>
+  <%= f.submit %>
+<% end %>

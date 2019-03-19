@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2019_03_18_004353) do
   create_table "points_transactions", force: :cascade do |t|
     t.bigint "house_id"
     t.integer "ammount"
-    t.boolean "in"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["house_id"], name: "index_points_transactions_on_house_id"

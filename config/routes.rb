@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   resources :users
+  resources :points_transactions
   resources :houses
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
