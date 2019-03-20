@@ -1,7 +1,7 @@
 class HousesController < ApplicationController
 
   def index
-    @houses = House.all
+    @houses = House.all.order("average ASC")
   end
   def create
 

@@ -3,7 +3,7 @@ class CreateEnergyTabs < ActiveRecord::Migration[5.2]
     create_table :energy_readings do |t|
       t.belongs_to :house
       t.integer :reading
-      t.timestamp
+      t.timestamps
     end
   end
 end

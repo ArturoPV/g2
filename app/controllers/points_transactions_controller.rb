@@ -8,6 +8,7 @@ class PointsTransactionsController < ApplicationController
       if @points_transaction.save
         house = House.find(@points_transaction.house_id)
         house.points += @points_transaction.ammount
+        house.average = house.points/house.ammount
         house.save
         redirect_to house_path(house.id)
       end

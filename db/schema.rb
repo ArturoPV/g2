@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_18_004524) do
+ActiveRecord::Schema.define(version: 2019_03_20_045146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,15 +18,20 @@ ActiveRecord::Schema.define(version: 2019_03_18_004524) do
   create_table "energy_readings", force: :cascade do |t|
     t.bigint "house_id"
     t.integer "reading"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["house_id"], name: "index_energy_readings_on_house_id"
   end
 
   create_table "houses", force: :cascade do |t|
     t.integer "number"
-    t.string "name"
+    t.string "name", default: "noname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "points", default: 0
+    t.integer "energy_cache", default: 0
+    t.integer "cache_size", default: 0
+    t.integer "average", default: 0
   end
 
   create_table "points_transactions", force: :cascade do |t|
