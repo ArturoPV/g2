@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2019_03_18_004524) do
 
   create_table "energy_readings", force: :cascade do |t|
     t.bigint "house_id"
-    t.integer "device_id"
     t.integer "reading"
     t.index ["house_id"], name: "index_energy_readings_on_house_id"
   end
