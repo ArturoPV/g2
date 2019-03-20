@@ -1,0 +1,2 @@
+class EnergyTransactionsController < ApplicationController
+end
