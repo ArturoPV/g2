@@ -1,0 +1,3 @@
+class EnergyReading < ApplicationRecord
+
+end

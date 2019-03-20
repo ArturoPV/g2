@@ -1,2 +1,0 @@
-class EnergyTransactionsController < ApplicationController
-end

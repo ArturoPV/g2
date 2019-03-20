@@ -15,17 +15,11 @@ ActiveRecord::Schema.define(version: 2019_03_18_004524) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "energy_tabs", force: :cascade do |t|
+  create_table "energy_readings", force: :cascade do |t|
     t.bigint "house_id"
-    t.integer "total"
-    t.integer "ammount", default: 0
-    t.index ["house_id"], name: "index_energy_tabs_on_house_id"
-  end
-
-  create_table "energy_transactions", force: :cascade do |t|
-    t.bigint "energy_tab_id"
+    t.integer "device_id"
     t.integer "reading"
-    t.index ["energy_tab_id"], name: "index_energy_transactions_on_energy_tab_id"
+    t.index ["house_id"], name: "index_energy_readings_on_house_id"
   end
 
   create_table "houses", force: :cascade do |t|

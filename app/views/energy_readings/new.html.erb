@@ -1,0 +1,14 @@
+<div class="container" style="width: 26%; margin-top: 5%;">
+<%= form_for @energy_reading do |f| %>
+  <h1 style="font-family: Arial,sans-serif;">add points</h1>
+  <div class="form-group">
+    <%= f.label :device_id %>:
+    <%= f.number_field :device_id %><br />
+  </div>
+
+  <div class="form-group">
+    <%= f.label :ammount %>:
+    <%= f.number_field :reading %><br />
+  </div>
+  <%= f.submit %>
+<% end %>

@@ -1,2 +1,0 @@
-class EnergyTab < ApplicationRecord
-end

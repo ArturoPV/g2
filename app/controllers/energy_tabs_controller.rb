@@ -1,2 +1,0 @@
-class EnergyTabsController < ApplicationController
-end
