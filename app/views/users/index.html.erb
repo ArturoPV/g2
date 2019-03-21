@@ -1,6 +1,10 @@
 <% User.all.each do |u| %>
 
-<%=link_to u.name, user_path(u.id)%>
 <br>
+<div class="container">
+  <div class="jumbotron">
+    <%=link_to u.name, user_path(u.id)%>
+  </div>
+</div>
 
 <%end%>

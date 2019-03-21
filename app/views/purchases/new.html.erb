@@ -1,0 +1,22 @@
+<div class="container" style="width: 26%; margin-top: 5%;">
+<%= form_for @purchase do |f| %>
+  <h1 style="font-family: Arial,sans-serif;">Request a purchase</h1>
+  <div class="form-group">
+    <h4>Name of the item</h4>
+    <%= f.text_field :name %><br />
+  </div>
+
+  <div class="form-group">
+    <h4>Give us a short description of the item</h4>
+    <%= f.text_area :description %><br />
+  </div>
+
+  <div class="form-group">
+    <h4>Link to the item</h4>
+    <%= f.text_field :link %><br />
+
+  <%= f.submit %>
+  <!--button id="registrar" class="btn btn-default" style="background: linear-gradient(to bottom,#dc3545,#f0c14b); width: 100%">Registrarse</button-->
+  <!-- <button id="enviar" type="submit" class="btn btn-default" style="background: linear-gradient(to bottom,#dc3545,#f0c14b); width: 100%;">Registrarse</button> -->
+<% end %>
+<br>

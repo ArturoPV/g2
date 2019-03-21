@@ -1,7 +1,7 @@
 @font-face{
   font-family: Mosk;
   src:url(font/Mosk-Medium-500.ttf);
-  
+
 }
 body{
   font-size: 1em;
@@ -60,6 +60,10 @@ input[type="submit"]{
   padding-top: 1%;
   padding-bottom:1%;
   border-radius: 25px;
+}
+.jumbotron{
+  background: white;
+
 }
 a:link{
   color: white;

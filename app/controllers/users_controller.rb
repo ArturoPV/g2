@@ -15,4 +15,7 @@ class UsersController < ApplicationController
       redirect_to login_path
     end
   end
+  def edit
+
+  end
 end
