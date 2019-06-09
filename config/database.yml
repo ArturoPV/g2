@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: g2_production
-  username: g2
-  password: <%= ENV['G2_DATABASE_PASSWORD'] %>
