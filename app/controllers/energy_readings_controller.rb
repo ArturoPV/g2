@@ -1,4 +1,7 @@
 class EnergyReadingsController < ApplicationController
+  
+  skip_before_action :verify_authenticity_token
+  
   def new
     @energy_reading = EnergyReading.new
   end
