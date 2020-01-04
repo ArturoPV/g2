@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :users
   resources :points_transactions
   resources :houses
-  resources :energy_readings
+
+  get '/create_energy_reading', to: 'energy_readings#create'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: 'logout'

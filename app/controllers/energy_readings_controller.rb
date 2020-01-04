@@ -2,18 +2,18 @@ class EnergyReadingsController < ApplicationController
   
   skip_before_action :verify_authenticity_token
   
-  def new
-    @energy_reading = EnergyReading.new
-  end
   def create
-    @energy_reading = EnergyReading.new(params.require(:energy_reading).permit(:id, :reading, :house_id))
-    house = House.where(id: @energy_reading.house_id).first_or_create
-    if @energy_reading.save
-      house.energy_cache += @energy_reading.reading
+    energy_reading = EnergyReading.new(house_id: params[:house_id], reading: params[:reading])
+    house = House.where(id: params[:house_id]).first_or_initialize
+
+    if energy_reading.save
+      house.energy_cache += energy_reading.reading
       house.cache_size += 1
       house.average = house.energy_cache/house.cache_size
       house.save
-      redirect_to house_path(@energy_reading.house_id)
+      render plain: 'Reading successfully created'
+    else
+      render plain: 'Reading could not be created'
     end
   end
 end
